@@ -1,0 +1,7 @@
+%body
+  .lemma
+    .label
+      %b= @orthography.label
+    .reference
+      = link_to "Go to Coptic sublemma", coptic_sublemma_path(@orthography.coptic_sublemma_id)
+  = link_to 'Orthographies', orthographies_path

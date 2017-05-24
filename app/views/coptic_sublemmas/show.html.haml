@@ -1,0 +1,9 @@
+%body
+  .lemma
+    .label
+      %b= @coptic_sublemma.label
+    .pos
+      %i= @coptic_sublemma.pos
+    .reference
+      = link_to "Go to Greek lemma", greek_lemma_path(@coptic_sublemma.greek_lemma_id)
+  = link_to 'All Lemmas', coptic_sublemmas_path

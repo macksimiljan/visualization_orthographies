@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  dating_start: 1
+  dating_end: 1
+  dialect: MyString
+  manuscript: MyString
+  text: MyString
+  typo_broad: MyString
+  typo_sociohistoric: MyString
+  type_form: MyString
+  typo_content: MyString
+  typo_subjectmatter: MyString
+  typo_speccorpus: MyString
+
+two:
+  dating_start: 1
+  dating_end: 1
+  dialect: MyString
+  manuscript: MyString
+  text: MyString
+  typo_broad: MyString
+  typo_sociohistoric: MyString
+  type_form: MyString
+  typo_content: MyString
+  typo_subjectmatter: MyString
+  typo_speccorpus: MyString

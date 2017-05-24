@@ -1,0 +1,6 @@
+%section
+  - @greek_lemmas.each do |lemma|
+    %b= link_to("#{lemma.label}", greek_lemma_path(lemma))
+    %p= "#{lemma.pos}: #{lemma.meaning}"
+  =paginate @greek_lemmas
+  =page_entries_info @greek_lemmas

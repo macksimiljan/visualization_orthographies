@@ -1,0 +1,8 @@
+%section
+  - @coptic_sublemmas.each do |lemma|
+    %b= link_to("#{lemma.label}", coptic_sublemma_path(lemma))
+    %p
+      = "#{lemma.pos.downcase}, borrowed from "
+      = link_to lemma.greek_lemma.label, greek_lemma_path(lemma.greek_lemma.id)
+  =paginate @coptic_sublemmas
+  =page_entries_info @coptic_sublemmas

@@ -1,0 +1,11 @@
+%section
+  .lemma
+    .ddglc-id
+      ="(#{@greek_lemma.id})"
+    .label
+      %b= @greek_lemma.label
+    .meaning
+      %i= @greek_lemma.meaning
+    .pos
+      = @greek_lemma.pos
+  = link_to 'All Lemmas', greek_lemmas_path

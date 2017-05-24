@@ -1,0 +1,8 @@
+%section
+  - @orthographies.each do |orthography|
+    %b= link_to("#{orthography.label}", orthography_path(orthography.id))
+    %p
+      orthography of
+      = link_to orthography.coptic_sublemma.label, coptic_sublemma_path(orthography.coptic_sublemma_id)
+  =paginate @orthographies
+  =page_entries_info @orthographies
