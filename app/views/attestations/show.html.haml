@@ -1,0 +1,8 @@
+%section
+  Orthography
+  = link_to @attestation.orthography.label, orthography_path(@attestation.orthography_id)
+  with encoding
+  = @attestation.morpho_syntax.encoding
+  occurs in
+  = link_to @attestation.source.manuscript, source_path(@attestation.source_id)
+  = "#{@attestation.count}-times."

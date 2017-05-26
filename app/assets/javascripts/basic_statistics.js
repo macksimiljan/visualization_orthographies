@@ -1,0 +1,1 @@
+d3.select('#basic_statistics').append("p").text("New paragraph!");

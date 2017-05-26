@@ -1,0 +1,12 @@
+%section
+  - @attestations.each do |attestation|
+    %p
+      Orthography
+      = link_to attestation.orthography.label, orthography_path(attestation.orthography_id)
+      with encoding
+      %i= attestation.morpho_syntax.encoding
+      occurs in
+      = link_to attestation.source.manuscript, source_path(attestation.source_id)
+      = "#{attestation.count}-times."
+  =paginate @attestations
+  =page_entries_info @attestations

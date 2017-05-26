@@ -2,7 +2,7 @@
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
 #
-# Note that this schema.rb definition is the authoritative source for your
+# Note that this schema.rb definition is the authoritative sources for your
 # database schema. If you need to create the application database on another
 # system, you should be using db:schema:load, not running all the migrations
 # from scratch. The latter is a flawed and unsustainable approach (the more migrations
@@ -10,7 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170519155431) do
+ActiveRecord::Schema.define(version: 20170526165137) do
+
+  create_table "attestations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "count"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.integer  "orthography_id"
+    t.integer  "morpho_syntax_id"
+    t.integer  "source_id"
+    t.index ["morpho_syntax_id"], name: "fk_rails_df0ad1af90", using: :btree
+    t.index ["orthography_id"], name: "fk_rails_990d2b7aff", using: :btree
+    t.index ["source_id"], name: "fk_rails_085ea3684b", using: :btree
+  end
 
   create_table "coptic_sublemmas", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "label"
@@ -25,6 +37,12 @@ ActiveRecord::Schema.define(version: 20170519155431) do
     t.string   "label"
     t.string   "meaning"
     t.string   "pos"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "morpho_syntaxes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "encoding"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -56,6 +74,9 @@ ActiveRecord::Schema.define(version: 20170519155431) do
     t.index ["dialect"], name: "index_sources_on_dialect", using: :btree
   end
 
+  add_foreign_key "attestations", "morpho_syntaxes"
+  add_foreign_key "attestations", "orthographies"
+  add_foreign_key "attestations", "sources"
   add_foreign_key "coptic_sublemmas", "greek_lemmas"
   add_foreign_key "orthographies", "coptic_sublemmas"
 end
