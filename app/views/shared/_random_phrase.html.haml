@@ -1,0 +1,5 @@
+%span
+  - parts = GreekLemma.random_determinator_phrase
+  = parts[:det]
+  = link_to parts[:adj], greek_lemma_path(parts[:adj_id])
+  = link_to parts[:noun], greek_lemma_path(parts[:noun_id])
