@@ -8,6 +8,7 @@ class GreekLemma < ApplicationRecord
     {det: det, adj: adjective, noun: noun, adj_id: adj_id, noun_id: noun_id}
   end
 
+  # TODO: greek_lemma id: 1970, 2217 wird zu einem Leerzeichen beschnitten
   def self.random_word(pos)
     record = GreekLemma.where('pos LIKE ?', "%#{pos}%").where('meaning IS NOT NULL').where('LENGTH(meaning) > 2')
                         .order('RAND()')

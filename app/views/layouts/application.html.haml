@@ -12,11 +12,6 @@
     = render 'shared/navigation'
     .container-fluid#main-container
       .row
-        .col-xs-3
-          %p
-            Are you interested in
-            = render 'shared/random_phrase'
-            ?
-        .col-xs-9
+        .col-xs-12
           = yield
 
