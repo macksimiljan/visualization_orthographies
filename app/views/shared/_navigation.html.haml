@@ -3,7 +3,11 @@
   = navbar_collapse do
     = navbar_group id: 'menu' do
       = navbar_item 'Home', root_path
-      = navbar_item 'Basic Statistics', basic_statistics_index_path
+      = navbar_dropdown 'Basic Statistics' do
+        = navbar_dropdown_header 'Choose an Overview Chart'
+        = navbar_item 'Time-Dependent Overview', basic_statistics_index_path
+        = navbar_item 'Frequency Distribution', basic_statistics_frequency_index_path
+      = navbar_item 'Tree', tree_index_path
       = navbar_dropdown 'Data' do
         = navbar_dropdown_header 'Choose your data'
         = navbar_item 'Greek Lemmas', greek_lemmas_path

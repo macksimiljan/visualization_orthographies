@@ -29,12 +29,14 @@ gem "haml", '5.0.1'
 gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
+gem 'jquery-turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 # HTML, CSS, and JS framework
 gem 'bootstrap-sass', '~> 3.3.7'
 gem 'autoprefixer-rails'
 gem 'rails_bootstrap_navbar'
+gem 'bootstrap_form'
 
 gem 'd3-rails'
 

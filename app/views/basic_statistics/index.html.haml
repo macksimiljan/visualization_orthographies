@@ -1,12 +1,17 @@
 .section
-  %h1
-    Basic Statistics
-  = high_chart('chart_id', @chart)
-  .btn-group
-    %button{type: 'button', class: 'btn btn-default dropdown-toggle', 'data-toggle': 'dropdown', 'aria-hashpopup': 'true', 'aria-expanded': 'false'}
-      Interval Size
-      %span.caret
-    %ul{class: 'dropdown-menu'}
-      %li= link_to '50', '?interval=50'
-      %li= link_to '100', '?interval=100'
-      %li= link_to '250', '?interval=250'
+  .page-header
+    %h1
+      Basic Statistics
+  .panel.panel-default
+    .panel-body
+      = high_chart('stats_time', @chart_time)
+    .panel-footer
+      .btn-group
+        %button{type: 'button', class: 'btn btn-default dropdown-toggle', 'data-toggle': 'dropdown', 'aria-hashpopup': 'true', 'aria-expanded': 'false'}
+          Interval Size
+          %span.caret
+        %ul.dropdown-menu
+          %li= link_to '50', '?interval=50'
+          %li= link_to '100', '?interval=100'
+          %li= link_to '200', '?interval=200'
+

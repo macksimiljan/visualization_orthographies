@@ -1,6 +1,11 @@
 class SourcesController < ApplicationController
   def index
-    @sources = Source.all.page(params[:page])
+    @sources =
+      if params[:ids].nil?
+        Source.all.page(params[:page])
+      else
+        Source.where("id in (#{params[:ids][1...-1]})").page(params[:page])
+      end
   end
 
   def show

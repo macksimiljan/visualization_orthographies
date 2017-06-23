@@ -11,10 +11,12 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.turbolinks
 //= require jquery_ujs
-//= require turbolinks
+
 //= require bootstrap-sprockets
 //= require d3
+//= require jquery-readyselector
 //= require_tree .
 
 //= require highcharts/highcharts

@@ -1,0 +1,47 @@
+.section
+  .page-header
+    %h1
+      Basic Statistics
+  .row
+    .col-xs-10
+      .row
+        .col-xs-6
+          .panel.panel-default
+            .panel-body
+              = high_chart('statistics_frequency00', @chart_frequency00)
+        .col-xs-6
+          .panel.panel-default
+            .panel-body
+              = high_chart('statistics_frequency01', @chart_frequency01)
+      .row
+        .col-xs-6
+          .panel.panel-default
+            .panel-body
+              = high_chart('statistics_frequency10', @chart_frequency10)
+        .col-xs-6
+          .panel.panel-default
+            .panel-body
+              = high_chart('statistics_frequency11', @chart_frequency11)
+    .col-xs-2
+      .panel.panel-default
+        .panel-heading
+          Change Diagrams
+        .panel-body
+          - attributes = [['Dating (Start)', 'dating_start'], ['Dating (End)', 'dating_end'], ['Dialect', 'dialect'],
+                          ['Manuscript', 'manuscript'], ['Text', 'text'], ['Typology: broad', 'typo_broad'],
+                          ['Typology: content', 'typo_content'], ['Typology: form', 'typo_form'], ['Typology: socio-historic', 'typo_sociohistoric'],
+                          ['Typology: specific corpus', 'typo_speccorpus'], ['Typology: subject-matter', 'typo_subjectmatter']]
+          = bootstrap_form_tag url: basic_statistics_frequency_index_url, method: 'GET' do |f| #, layout: :horizontal, label_col: "col-sm-4", control_col: "col-sm-5" do |f|
+            = f.form_group label: { text: 'Diagram 1' } do
+              = f.select :percentage00, [['3%', 0.03], ['4%', 0.04], ['5%', 0.05], ['10%', 0.1]], {label: 'Minimum Percentage:'}, {class: 'selectpicker'}
+              = f.select :attribute00, attributes, {label: 'Attribute:'}, {class: 'selectpicker'}
+            = f.form_group label: {text: 'Diagram 2'} do
+              = f.select :percentage01, [['3%', 0.03], ['4%', 0.04], ['5%', 0.05], ['10%', 0.1]], {label: 'Minimum Percentage:'}, {class: 'selectpicker'}
+              = f.select :attribute01, attributes, {label: 'Attribute:'}, {class: 'selectpicker'}
+            = f.form_group label: {text: 'Diagram 3'} do
+              = f.select :percentage10, [['3%', 0.03], ['4%', 0.04], ['5%', 0.05], ['10%', 0.1]], {label: 'Minimum Percentage:'}, {class: 'selectpicker'}
+              = f.select :attribute10, attributes, {label: 'Attribute:'}, {class: 'selectpicker'}
+            = f.form_group label: {text: 'Diagram 4'} do
+              = f.select :percentage11, [['3%', 0.03], ['4%', 0.04], ['5%', 0.05], ['10%', 0.1]], {label: 'Minimum Percentage:'}, {class: 'selectpicker'}
+              = f.select :attribute11, attributes, {label: 'Attribute:'}, {class: 'selectpicker'}
+            = f.submit 'Refresh'

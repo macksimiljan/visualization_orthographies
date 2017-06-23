@@ -4,4 +4,6 @@
       %b= @orthography.label
     .reference
       = link_to "Go to Coptic sublemma", coptic_sublemma_path(@orthography.coptic_sublemma_id)
+    .reference
+      = link_to "Go to Sources", "http://localhost:3000/sources?ids=#{@orthography.sources.pluck(:id)}"
   = link_to 'Orthographies', orthographies_path

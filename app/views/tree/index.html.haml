@@ -1,0 +1,75 @@
+.page-header
+  %h1
+    Orthography Tree
+.row
+  .col-xs-2
+    %p
+      Starting point is a
+      %b
+        Greek lemma
+      in the middle of the first column.
+  .col-xs-2
+    %p
+      In the second column, there are the corresponding
+      %b
+        coptic sublemmas.
+      A colored rectangle highlights the part-of-speech:
+      = succeed ', ' do
+        %span.noun-color noun
+      = succeed ', ' do
+        %span.adjective-color adjective
+      = succeed ', and' do
+        %span.verb-color verb
+      = succeed '.' do
+        %span.adverb-color adverb
+  .col-xs-2
+    %p
+      The
+      %b
+        orthographies
+      are in the middle. Within each group, the entities are ordered by their dating descending.
+  .col-xs-5
+    %p
+      On the right side, some information to the orthographies are depicted.
+      The bars, end points of the links, show the
+      %b
+        frequency
+      of an orthography.
+      The
+      %b
+        dating
+      ⌚ is simplified to the mean when a period is given.
+      For instance, a dating 400 to 499 is mapped to 450.
+      The
+      %b
+        dialect
+      👤 defines the color of the bars
+      = precede '(' do
+        = succeed ', ' do
+          %span.a-dialect-color A
+      = succeed ', ' do
+        %span.l-dialect-color L L* L4 L5 L6
+      = succeed ',' do
+        %span.s-dialect-color S Sp SR
+      = succeed ', and' do
+        %span.m-dialect-color M M4 M5
+      = succeed ').' do
+        %span.b-dialect-color B B4
+      All other dialects are not specially highlighted.
+      Eventually, one example
+      %b
+        manuscript
+      📄 for the dating-dialect paring is shown. All manuscripts can be retrieved by clicking on the text.
+
+.row
+  .panel.panel-default
+    .panel-heading
+      Browse an orthography tree
+    .panel-body
+      = collection_select :greek_lemma, :id, GreekLemma.all.order(:label), :id, :label, options = {include_blank: "Select a Greek lemma..."}, html_options = {:onchange => "loadData(this.value)"}
+      %button{:onclick => "collapseAll()", :class => "btn btn-default"}
+        Collapse it
+      %button{:onclick => "expandAll()", :class => "btn btn-default"}
+        Expand it
+    #tree-container
+

@@ -1,10 +1,8 @@
-class BasicStatistics
+class BasicStatisticsTime
 
-  MIN_YEAR = 200
-  MAX_YEAR = 1299
-
-  def count_per_time(measure='greek_lemma', interval = 50)
-    histogram = aggregate(initial_histogram(measure), interval)
+  def count_per_time(measure='greek_lemma', parameters)
+    read_params(parameters)
+    histogram = aggregate(initial_histogram(measure))
     x_axis_categories = []
     y_axis_data = []
     Hash[histogram.sort].each_pair do |key, value|
@@ -15,6 +13,12 @@ class BasicStatistics
   end
 
   private
+
+  def read_params(parameters)
+    @interval = parameters[:interval].nil? ? 50 : parameters[:interval].to_i
+    @min_year = parameters[:min_year].nil? ? 200 : parameters[:min_year].to_i
+    @max_year = parameters[:max_year].nil? ? 1299 : parameters[:max_year].to_i
+  end
 
   def initial_histogram(table)
     histogram = initialize_histogram
@@ -28,7 +32,7 @@ class BasicStatistics
 
   def initialize_histogram
     histogram = {}
-    (MIN_YEAR..MAX_YEAR).each do |year|
+    (@min_year..@max_year).each do |year|
       histogram[year] = 0
     end
     histogram
@@ -49,11 +53,11 @@ class BasicStatistics
     end
   end
 
-  def aggregate(histogram, interval)
+  def aggregate(histogram)
     histogram_aggr = {}
-    MIN_YEAR.step(MAX_YEAR, interval).each do |interval_start|
+    @min_year.step(@max_year, @interval).each do |interval_start|
       histogram_aggr[interval_start] = 0
-      (interval_start..(interval_start + interval-1)).each do |year|
+      (interval_start..(interval_start + @interval-1)).each do |year|
         histogram_aggr[interval_start] += histogram[year] unless histogram[year].nil?
       end
     end
