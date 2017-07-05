@@ -1,7 +1,6 @@
 class Tree
 
   def fetch(root)
-    puts
     tree = []
     @leaves_count = 0
     @maximum_count = 0
@@ -10,6 +9,7 @@ class Tree
     greek_lemma = GreekLemma.find(root)
     tree_greek[:url] = "http://localhost:3000/greek_lemmas/#{root}"
     tree_greek[:class] = pos_to_node_class(greek_lemma.pos)
+    tree_greek[:tooltip] = "#{greek_lemma.pos.downcase} #{greek_lemma.meaning}"
     tree_greek[:name] = greek_lemma.label
     tree_greek[:parent] = 'null'
     tree_greek[:children] = []
@@ -30,14 +30,12 @@ class Tree
 
   def sort_coptic_sublemmas(coptic_tress)
     sorted = coptic_tress.sort_by do |tree|
-      puts "tree:#{tree}"
       if tree[:children].empty?
         tree[:url]
       elsif tree[:children].first[:children].empty?
         tree[:children].first[:url]
       else
         key = tree[:children].first[:children].first[:name]
-        puts "key:#{key}"
         key
       end
     end
@@ -48,6 +46,7 @@ class Tree
     tree_coptic = {}
     tree_coptic[:url] = "http://localhost:3000/coptic_sublemmas/#{coptic_sublemma.id}"
     tree_coptic[:class] = pos_to_node_class(coptic_sublemma.pos)
+    tree_coptic[:tooltip] = 'tbd'
     tree_coptic[:name] = coptic_sublemma.label
     tree_coptic[:parent] = parent
     tree_coptic[:children] = []
@@ -76,6 +75,7 @@ class Tree
     tree_ortho = {}
     tree_ortho[:url] = "http://localhost:3000/orthographies/#{orthography.id}"
     tree_ortho[:class] = 'internal-node'
+    tree_ortho[:tooltip] = 'tbd'
     tree_ortho[:name] = orthography.label
     tree_ortho[:parent] = parent
     tree_ortho[:children] = sources_tree(orthography.sources,
@@ -143,6 +143,7 @@ class Tree
     tree_leaf[:url] = "http://localhost:3000/sources?ids=#{values[:ids]}"
     tree_leaf[:class] = dialect_to_node_class(values[:dialect])
     tree_leaf[:text_class] = 'leaf-tree-text'
+    tree_leaf[:tooltip] = 'tbd'
     tree_leaf[:name] = values[:label]
     tree_leaf[:parent] = parent
     tree_leaf[:count] = values[:count]
@@ -174,7 +175,7 @@ class Tree
     if %w[a s m b l].include? dialect
       "#{dialect}-dialect-node leaf-node"
     elsif not dialect.nil?
-      'x-dialect-node leaf_node'
+      'x-dialect-node leaf-node'
     else
       'leaf-node'
     end

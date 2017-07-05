@@ -1,0 +1,26 @@
+.row
+  .xs-9.col-md-offset-1
+    %ul.list-in-table
+      %li
+        Database
+        %br
+        relational (second normal form):
+        = link_to image_tag('includes-mysql-88x31.png', class: 'thumbnail'), 'https://www.mysql.com', target: '_blank'
+      %li
+        Framework
+        %table
+          %tbody
+            %tr
+              %td
+                Ruby on Rails
+                = link_to image_tag('rails-logo.svg', class: 'thumbnail alg'), 'http://rubyonrails.org/', target: '_blank'
+              %td
+                Bootstrap
+                = link_to image_tag('144px-Boostrap_logo.svg.png', class: 'thumbnail alg'), 'https://getbootstrap.com/', target: '_blank'
+            %tr
+              %td
+                Highcharts
+                = link_to image_tag('highcharts_logo.svg', class: 'thumbnail alg'), 'https://www.highcharts.com/', target: '_blank'
+              %td
+                D3
+                = link_to image_tag('d3_logo.svg', class: 'thumbnail alg'), 'https://d3js.org/', target: '_blank'

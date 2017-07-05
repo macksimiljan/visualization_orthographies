@@ -1,0 +1,126 @@
+.panel-group#accordionInnerAbstraction{:role=>"tablist", 'aria-multiselectable'=>"true"}
+  .panel.panel-default
+    .panel-heading#dataAbstraction{:role=>"tab"}
+      %h4.panel-title
+        %a{:role=>"button", 'data-toggle'=>"collapse", 'data-parent'=>"#accordionInnerAbstraction", :href=>"#collapseOneInner", 'aria-expanded'=>"true", 'aria-controls'=>"collapseOneInner"}
+          Data abstraction
+    .panel-collapse.collapse#collapseOneInner{:role=>"tabpanel", 'aria-labelledby'=>"dataAbstraction"}
+      .panel-body
+        .row
+          .col-xs-7.col-md-offset-1
+            %table.table.table-hover
+              %thead
+                %tr
+                  %th
+                    Criterion
+                  %th
+                    Value
+                %tbody
+                  %tr
+                    %td stored dataset type
+                    %td relational/ table
+                  %tr
+                    %td logical dataset type
+                    %td network/ tree
+                  %tr
+                    %td dataset availability
+                    %td static
+                  %tr
+                    %td items and attributes
+                    %td
+                      %ul.list-in-table
+                        %li
+                          Greek lemma:
+                          %br
+                          label, meaning, part-of-speech
+                        %li
+                          Coptic sublemma:
+                          %br
+                          label, part-of-speech
+                        %li
+                          Orthography:
+                          %br
+                          label
+                        %li
+                          Morpho-Syntax:
+                          %br
+                          label
+                        %li
+                          Source:
+                          %br
+                          dating interval, dialect (rough localisation), manuscript, text,
+                          %br
+                          set of typology categories
+                  %tr
+                    %td links and attributes
+                    %td
+                      %table#link-table
+                        %tbody
+                          %tr
+                            %td Coptic sublemma
+                            %td
+                              %i derives from
+                            %td Greek lemma
+                          %tr
+                            %td Orthography
+                            %td
+                              %i is a variant of
+                            %td Coptic sublemma
+                          %tr
+                            %td Orthography
+                            %td
+                              %i is attested in
+                            %td Source
+                            %td
+                              %i w.r.t.
+                            %td Morpho-Syntax
+          .col-xs-4
+            = image_tag('datamodel.svg', class: 'img-responsive')
+  .panel.panel-default
+    .panel-heading#taskAbstraction{:role=>"tab"}
+      %h4.panel-title
+        %a{:role=>"button", 'data-toggle'=>"collapse", 'data-parent'=>"#accordionInnerAbstraction", :href=>"#collapseTwoInner", 'aria-expanded'=>"true", 'aria-controls'=>"collapseTwoInner"}
+          Task abstraction
+    .panel-collapse.collapse#collapseTwoInner{:role=>"tabpanel", 'aria-labelledby'=>"taskAbstraction"}
+      .panel-body
+        .row
+          .col-xs-10.col-md-offset-1
+            %table.table.table-hover#task-table
+              %thead
+                %tr
+                  %th Task
+                  %th Target
+                  %th Example
+                  %th Comment
+                %tbody
+                  %tr
+                    %td Analyze ➟ Consume ➟ Discover
+                    %td All Data ➟ Trends
+                    %td
+                      = link_to image_tag('overview1.png', class: 'thumbnail'), basic_statistics_index_path, target: '_blank'
+                    %td —
+                  %tr
+                    %td Analyze ➟ Produce ➟ Derive
+                    %td All Data ➟ Trends
+                    %td
+                      = link_to image_tag('overview1.png', class: 'thumbnail'), basic_statistics_index_path, target: '_blank'
+                    %td
+                      derived: orthography frequencies
+                  %tr
+                    %td Query ➟ Compare
+                    %td Attributes ➟ One
+                    %td
+                      = link_to image_tag('frequency.png', class: 'thumbnail'), basic_statistics_frequency_index_path, target: '_blank'
+                    %td —
+                  %tr
+                    %td Search ➟ Lookup
+                    %td Attributes ➟ One
+                    %td
+                      = link_to image_tag('tree.png', class: 'thumbnail'), tree_index_path, target: '_blank'
+                    %td select root of the tree
+                  %tr
+                    %td Search ➟ Browse
+                    %td Network Data ➟ Paths
+                    %td
+                      = link_to image_tag('tree.png', class: 'thumbnail'), tree_index_path, target: '_blank'
+                    %td —

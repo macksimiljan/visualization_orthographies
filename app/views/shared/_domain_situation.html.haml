@@ -1,0 +1,31 @@
+.row
+  .col-xs-7.col-md-offset-1
+    %table.table.table-hover
+      %thead
+        %tr
+          %th
+            Criterion
+          %th
+            Value
+        %tbody
+          %tr
+            %td domain
+            %td Coptology, linguistics
+          %tr
+            %td topic
+            %td Greek loanwords, particularly their orthographies
+          %tr
+            %td source
+            %td
+              = link_to 'DDGLC project', 'http://www.research.uni-leipzig.de/ddglc'
+          %tr
+            %td data
+            %td categorization of orthographies based on the underlying Greek lemma, Coptic sublemma, as well as manuscript and text information
+          %tr
+            %td aims
+            %td
+              %ul.list-in-table
+                %li gain a clear view of orthographies
+                %li change of orthographies over time
+  .col-xs-4
+    = link_to image_tag('cut2_coptic_luke.jpg', class: 'img-responsive'), 'https://commons.wikimedia.org/wiki/File:Coptic_luke.jpg', target: '_blank'

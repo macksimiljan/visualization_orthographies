@@ -1,0 +1,99 @@
+.panel-group#accordionInnerIdioms{:role=>"tablist", 'aria-multiselectable'=>"true"}
+  .panel.panel-default
+    .panel-heading#idiomEncoding{:role=>"tab"}
+      %h4.panel-title
+        %a{:role=>"button", 'data-toggle'=>"collapse", 'data-parent'=>"#accordionInnerIdioms", :href=>"#collapseOneInnerIdiom", 'aria-expanded'=>"true", 'aria-controls'=>"collapseOneInnerIdiom"}
+          Visual Encoding
+    .panel-collapse.collapse#collapseOneInnerIdiom{:role=>"tabpanel", 'aria-labelledby'=>"idiomEncoding"}
+      .panel-body
+        .row
+          .col-xs-9.col-md-offset-1
+            %table.table.table-hover
+              %thead
+                %tr
+                  %th Visualization
+                  %th Mark
+                  %th Channel
+                  %th Meaning
+                %tbody
+                  %tr
+                    %td Tree
+                    %td Point
+                    %td
+                      %ul.list-in-table
+                        %li
+                          Color hue
+                          %span.noun-color ■
+                          %span.verb-color ■
+                          %span.adjective-color ■
+                          %span.adverb-color ■
+                          %span.default-color ■
+                        %li
+                          Shape 🞎 🞔
+                        %li vertical position ↓
+                    %td
+                      %ul.list-in-table
+                        %li part-of-speech
+                        %li node has hidden children
+                        %li ranking due to latest attested orthography
+                  %tr
+                    %td Tree
+                    %td Link marks
+                    %td
+                      %ul.list-in-table
+                        %li horizontal position ⟶
+                    %td
+                      %ul.list-in-table
+                        %li
+                          %i derives from, is a variant of, is attested in
+                  %tr
+                    %td Tree
+                    %td Line
+                    %td
+                      %ul.list-in-table
+                        %li
+                          Color hue
+                          %span.a-dialect-color ■
+                          %span.l-dialect-color ■
+                          %span.s-dialect-color ■
+                          %span.m-dialect-color ■
+                          %span.b-dialect-color ■
+                          %span.default-color ■
+                        %li length – ⸺ ⸻
+                        %li vertical position ↓
+                    %td
+                      %ul.list-in-table
+                        %li dialect
+                        %li frequency
+                        %li approximate attestation date of orthography
+
+
+  .panel.panel-default
+    .panel-heading#idiomInteraction{:role=>"tab"}
+      %h4.panel-title
+        %a{:role=>"button", 'data-toggle'=>"collapse", 'data-parent'=>"#accordionInnerIdioms", :href=>"#collapseTwoInnerIdiom", 'aria-expanded'=>"true", 'aria-controls'=>"collapseTwoInnerIdiom"}
+          Interaction
+    .panel-collapse.collapse#collapseTwoInnerIdiom{:role=>"tabpanel", 'aria-labelledby'=>"idiomInteraction"}
+      .panel-body
+        .row
+          .col-xs-8.col-md-offset-1
+            %table.table.table-hover#task-table
+              %thead
+                %tr
+                  %th Interaction
+                  %th Where
+                  %th Result
+                %tbody
+                  %tr
+                    %td Manipulate ➟ Select
+                    %td Tree, each node
+                    %td redirected to data view
+                  %tr
+                    %td Manipulate ➟ Navigate
+                    %td Tree, each parent node
+                    %td toggle visibility of children
+                  %tr
+                    %td Reduce ➟ Filter
+                    %td Tree, initial selection
+                    %td created tree only for selected Greek lemma
+

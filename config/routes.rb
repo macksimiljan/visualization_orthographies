@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   get 'tree/index'
+  get 'description/index'
 
   get 'dashboard/index'
 

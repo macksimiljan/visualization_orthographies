@@ -1,0 +1,35 @@
+.row
+  .col-xs-10.col-md-offset-1
+    .panel-group#accordion{:role=>"tablist", 'aria-multiselectable'=>"true"}
+      .panel.panel-default
+        .panel-heading#domainSituation{:role=>"tab"}
+          %h4.panel-title
+            %a{:role=>"button", 'data-toggle'=>"collapse", 'data-parent'=>"#accordion", :href=>"#collapseOne", 'aria-expanded'=>"true", 'aria-controls'=>"collapseOne"}
+              Domain situation
+        .panel-collapse.collapse.in#collapseOne{:role=>"tabpanel", 'aria-labelledby'=>"domainSituation"}
+          .panel-body
+            = render 'shared/domain_situation'
+      .panel.panel-default
+        .panel-heading#abstraction{:role=>"tab"}
+          %h4.panel-title
+            %a{:role=>"button", 'data-toggle'=>"collapse", 'data-parent'=>"#accordion", :href=>"#collapseTwo", 'aria-expanded'=>"true", 'aria-controls'=>"collapseTwo"}
+              Data and tasks
+        .panel-collapse.collapse#collapseTwo{:role=>"tabpanel", 'aria-labelledby'=>"abstraction"}
+          .panel-body
+            = render 'shared/abstraction'
+      .panel.panel-default
+        .panel-heading#idioms{:role=>"tab"}
+          %h4.panel-title
+            %a{:role=>"button", 'data-toggle'=>"collapse", 'data-parent'=>"#accordion", :href=>"#collapseThree", 'aria-expanded'=>"true", 'aria-controls'=>"collapseThree"}
+              Visual encoding and interaction
+        .panel-collapse.collapse#collapseThree{:role=>"tabpanel", 'aria-labelledby'=>"idioms"}
+          .panel-body
+            = render 'shared/idioms'
+      .panel.panel-default
+        .panel-heading#algorithms{:role=>"tab"}
+          %h4.panel-title
+            %a{:role=>"button", 'data-toggle'=>"collapse", 'data-parent'=>"#accordion", :href=>"#collapseFour", 'aria-expanded'=>"true", 'aria-controls'=>"collapseFour"}
+              Algorithm
+        .panel-collapse.collapse#collapseFour{:role=>"tabpanel", 'aria-labelledby'=>"algorithms"}
+          .panel-body
+            = render 'shared/algorithms'
