@@ -4,24 +4,45 @@
       Basic Statistics
   .row
     .col-xs-10
-      .row
-        .col-xs-6
-          .panel.panel-default
-            .panel-body
-              = high_chart('statistics_frequency00', @chart_frequency00)
-        .col-xs-6
-          .panel.panel-default
-            .panel-body
-              = high_chart('statistics_frequency01', @chart_frequency01)
-      .row
-        .col-xs-6
-          .panel.panel-default
-            .panel-body
-              = high_chart('statistics_frequency10', @chart_frequency10)
-        .col-xs-6
-          .panel.panel-default
-            .panel-body
-              = high_chart('statistics_frequency11', @chart_frequency11)
+      .panel-group#accordionStats{:role=>"tablist", 'aria-multiselectable'=>"true"}
+        .row
+          .col-xs-6
+            .panel.panel-default
+              .panel-heading#statsDiagr1{:role=>"tab"}
+                %h4.panel-title
+                  %a{:role=>"button", 'data-toggle'=>"collapse", 'data-parent'=>"#accordionStats", :href=>"#collapseD1", 'aria-expanded'=>"true", 'aria-controls'=>"collapseD1"}
+                    Diagram 1
+              .panel-collapse.collapse#collapseD1{:role=>"tabpanel", 'aria-labelledby'=>"statsDiagr1"}
+                .panel-body
+                  = high_chart('statistics_frequency00', @chart_frequency00)
+          .col-xs-6
+            .panel.panel-default
+              .panel-heading#statsDiagr2{:role=>"tab"}
+                %h4.panel-title
+                  %a{:role=>"button", 'data-toggle'=>"collapse", 'data-parent'=>"#accordionStats", :href=>"#collapseD2", 'aria-expanded'=>"true", 'aria-controls'=>"collapseD2"}
+                    Diagram 2
+              .panel-collapse.collapse#collapseD2{:role=>"tabpanel", 'aria-labelledby'=>"statsDiagr2"}
+                .panel-body
+                  = high_chart('statistics_frequency01', @chart_frequency01)
+        .row
+          .col-xs-6
+            .panel.panel-default
+              .panel-heading#statsDiagr3{:role=>"tab"}
+                %h4.panel-title
+                  %a{:role=>"button", 'data-toggle'=>"collapse", 'data-parent'=>"#accordionStats", :href=>"#collapseD3", 'aria-expanded'=>"true", 'aria-controls'=>"collapseD3"}
+                    Diagram 3
+              .panel-collapse.collapse#collapseD3{:role=>"tabpanel", 'aria-labelledby'=>"statsDiagr3"}
+                .panel-body
+                  = high_chart('statistics_frequency10', @chart_frequency10)
+          .col-xs-6
+            .panel.panel-default
+              .panel-heading#statsDiagr4{:role=>"tab"}
+                %h4.panel-title
+                  %a{:role=>"button", 'data-toggle'=>"collapse", 'data-parent'=>"#accordionStats", :href=>"#collapseD4", 'aria-expanded'=>"true", 'aria-controls'=>"collapseD4"}
+                    Diagram 4
+              .panel-collapse.collapse#collapseD4{:role=>"tabpanel", 'aria-labelledby'=>"statsDiagr4"}
+                .panel-body
+                  = high_chart('statistics_frequency11', @chart_frequency11)
     .col-xs-2
       .panel.panel-default
         .panel-heading

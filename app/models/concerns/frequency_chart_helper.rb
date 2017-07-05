@@ -2,13 +2,13 @@ module FrequencyChartHelper
   def general_graph(series_name, y_values)
     LazyHighCharts::HighChart.new('graph') do |f|
       f.title(text: 'How many orthography tokens are there per <b>'+series_name+'</b>?')
-      f.tooltip(pointFormat: 'orthograhies: <b>{point.percentage: .1f}%</b>')
+      f.tooltip(pointFormat: 'orthograhies: {point.percentage: .1f}%')
       f.plotOptions(pie: {allowPointSelect: true,
                           cursor: 'pointer'})
       f.series(name: series_name,
                colorByPoint: true,
                data: y_values,
-               dataLabels: {style: {fontSize: '15px'}})
+               dataLabels: {style: {fontSize: '13px'}})
       f.chart(defaultSeriesType: 'pie',
               backgroundColor: '#FFF',
               borderWidth: 0,
