@@ -1,0 +1,17 @@
+%svg{:width=>'1280', :height=>'800', :xmlns=>'http://www.w3.org/2000/svg', :style=>'vector-effect: non-scaling-stroke'}
+  %defs
+    %pattern#img1{patternUnits:"userSpaceOnUse", width:"50%", height:"50%", viewBox:"0 0 500 500", x:-30, y:-230}
+      %image{:href=>image_url('overview1.png'), :width=>'226', :height=>'192'}
+  %g
+    - start = [100,30]; length = 120
+    %polygon.hexagon{:points=>Hexagon.points(start, length), :transform=>Hexagon.rotation(start, length)}
+    %text.random-phrase{:x=>start[0].to_s, :y=>start[1].to_s}
+      - center = Hexagon.center(start, length)
+      %tspan{:x=>center[0]-0.65*length, :y=>(center[1]-20)}
+        Are you looking for
+      %tspan{:x=>center[0]-0.65*length, :y=>(center[1]+20)}
+        = render 'shared/random_phrase'
+  %g
+    - start = [120,550]; length = 120
+    %a{href:basic_statistics_index_path}
+      %polygon.hexagon#overview1{:points=>Hexagon.points(start, length)}
