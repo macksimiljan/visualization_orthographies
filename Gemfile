@@ -38,6 +38,8 @@ gem 'autoprefixer-rails'
 gem 'rails_bootstrap_navbar'
 gem 'bootstrap_form'
 
+gem 'rails_admin', '~> 1.2'
+
 gem 'd3-rails'
 
 gem 'lazy_high_charts'
