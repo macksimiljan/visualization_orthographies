@@ -2,6 +2,11 @@
   %ul
     %li= "Manuscript: #{@source.manuscript}"
     %li= "Text: #{@source.text}"
-    %li= "Dating: #{@source.dating_interval.join(' to ')}"
+    %li
+      Dating:
+      - if @source.dating_interval.empty?
+        unknown
+      - else
+        = @source.dating_interval.join(' to ')
     %li= "Dialect: #{@source.dialect}"
     %li= "Typology: #{@source.typologies.join(', ')}"

@@ -2,7 +2,12 @@
   - @sources.each do |source|
     = "#{source.manuscript}, #{source.text}:"
     %ul
-      %li= "Dating: #{source.dating_start} to #{source.dating_end}"
+      %li
+        Dating:
+        - if source.dating_interval.empty?
+          unknown
+        - else
+          = source.dating_interval.join(' to ')
       %li= "Dialect: #{source.dialect}"
       %li= link_to 'more information', source_path(source.id)
   =paginate @sources
