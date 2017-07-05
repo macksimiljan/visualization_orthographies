@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="31cm" height="30cm" viewBox="459 77 602 584" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g>
+    <rect style="fill: #e5e5e5" x="677" y="405" width="112.7" height="36"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="677" y="405" width="112.7" height="36"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="733.35" y="427">Orthography</text>
+  </g>
+  <g>
+    <rect style="fill: #e5e5e5" x="661" y="260" width="143.5" height="36"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="661" y="260" width="143.5" height="36"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="732.75" y="282">Coptic Sublemma</text>
+  </g>
+  <g>
+    <polygon style="fill: #ffffff" points="701.708,352.93 733.258,334 764.808,352.93 733.258,371.86 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="701.708,352.93 733.258,334 764.808,352.93 733.258,371.86 "/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="737.258" y="328">1</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="737.258" y="393.86">1..*</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="733.258" y="356.93">has</text>
+  </g>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="732.75,296 732.75,314.505 733.258,314.505 733.258,333.009 "/>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="733.258,371.86 733.258,387.925 733.35,387.925 733.35,403.991 "/>
+  <g>
+    <rect style="fill: #e5e5e5" x="677" y="126" width="112.7" height="36"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="677" y="126" width="112.7" height="36"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="733.35" y="148">Greek Lemma</text>
+  </g>
+  <g>
+    <polygon style="fill: #ffffff" points="701.708,208.93 733.258,190 764.808,208.93 733.258,227.86 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="701.708,208.93 733.258,190 764.808,208.93 733.258,227.86 "/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="737.258" y="184">0..1</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="737.258" y="249.86">1..*</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="733.258" y="212.93">has</text>
+  </g>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="733.35,162 733.35,175.505 733.258,175.505 733.258,189.009 "/>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="733.258,227.86 733.258,243.425 732.75,243.425 732.75,258.991 "/>
+  <g>
+    <rect style="fill: #e5e5e5" x="696.092" y="544.122" width="74.2" height="36"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="696.092" y="544.122" width="74.2" height="36"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="733.192" y="566.122">Source</text>
+  </g>
+  <g>
+    <polygon style="fill: #ffffff" points="687.564,492.445 733.139,465.1 778.714,492.445 733.139,519.79 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="687.564,492.445 733.139,465.1 778.714,492.445 733.139,519.79 "/>
+    <text font-size="7.7216" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="737.139" y="459.1"/>
+    <text font-size="7.7216" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="737.139" y="535.442"/>
+    <text font-size="7.7216" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="733.139" y="494.858">attested in</text>
+  </g>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="733.35,441 733.35,452.587 733.139,452.587 733.139,464.173 "/>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="733.139,519.79 733.139,531.451 733.192,531.451 733.192,543.113 "/>
+  <g>
+    <ellipse style="fill: #ffffff" cx="603.2" cy="642.176" rx="46.95" ry="18"/>
+    <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="603.2" cy="642.176" rx="46.95" ry="18"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="603.2" y="646.176">Dialect</text>
+  </g>
+  <g>
+    <ellipse style="fill: #ffffff" cx="503.89" cy="641.468" rx="43.1" ry="18"/>
+    <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="503.89" cy="641.468" rx="43.1" ry="18"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="503.89" y="645.468">Dating</text>
+  </g>
+  <g>
+    <ellipse style="fill: #ffffff" cx="994.388" cy="640.762" rx="66.2" ry="18"/>
+    <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="994.388" cy="640.762" rx="66.2" ry="18"/>
+    <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="994.388" cy="640.762" rx="58.2" ry="14"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="994.388" y="644.762">Texttypology</text>
+  </g>
+  <g>
+    <ellipse style="fill: #ffffff" cx="732.68" cy="638.64" rx="73.9" ry="18"/>
+    <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="732.68" cy="638.64" rx="73.9" ry="18"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="732.68" y="642.64">Manuscriptname</text>
+  </g>
+  <g>
+    <ellipse style="fill: #ffffff" cx="867.264" cy="640.054" rx="50.8" ry="18"/>
+    <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="867.264" cy="640.054" rx="50.8" ry="18"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="867.264" y="644.054">Textname</text>
+  </g>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="503.89,622.459 503.89,601.795 733.192,601.795 733.192,581.131 "/>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="603.2,623.795 603.2,601.61 733.192,601.61 733.192,581.114 "/>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="733.192,580.122 733.192,602.846 867.264,602.846 867.264,622.054 "/>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="733.192,581.092 733.192,602.846 994.388,602.846 994.388,622.762 "/>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="732.68,620.64 732.68,600.381 733.192,600.381 733.192,580.122 "/>
+  <g>
+    <ellipse style="fill: #ffffff" cx="920.062" cy="96.6428" rx="39.25" ry="18"/>
+    <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="920.062" cy="96.6428" rx="39.25" ry="18"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="920.062" y="100.643">Label</text>
+  </g>
+  <g>
+    <ellipse style="fill: #ffffff" cx="920.846" cy="186.445" rx="31.55" ry="18"/>
+    <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="920.846" cy="186.445" rx="31.55" ry="18"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="920.846" y="190.445">POS</text>
+  </g>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="789.7,144 834.751,144 834.751,96.6428 879.802,96.6428 "/>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="789.7,144 834.85,144 834.85,186.445 888.293,186.445 "/>
+  <g>
+    <ellipse style="fill: #ffffff" cx="920.69" cy="144.019" rx="46.95" ry="18"/>
+    <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="920.69" cy="144.019" rx="46.95" ry="18"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="920.69" y="148.019">Meaning</text>
+  </g>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="872.735,144.019 834.85,144.019 834.85,144 789.7,144 "/>
+  <g>
+    <ellipse style="fill: #ffffff" cx="917.526" cy="257.52" rx="39.25" ry="18"/>
+    <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="917.526" cy="257.52" rx="39.25" ry="18"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="917.526" y="261.52">Label</text>
+  </g>
+  <g>
+    <ellipse style="fill: #ffffff" cx="918.31" cy="297.824" rx="31.55" ry="18"/>
+    <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="918.31" cy="297.824" rx="31.55" ry="18"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="918.31" y="301.824">POS</text>
+  </g>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="804.5,278 840.883,278 840.883,257.52 877.266,257.52 "/>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="804.5,278 841.214,278 841.214,297.824 885.766,297.824 "/>
+  <g>
+    <ellipse style="fill: #ffffff" cx="909.748" cy="423.054" rx="39.25" ry="18"/>
+    <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="909.748" cy="423.054" rx="39.25" ry="18"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="909.748" y="427.054">Label</text>
+  </g>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="790.679,423 831.314,423 831.314,423.054 869.516,423.054 "/>
+  <g>
+    <rect style="fill: #e5e5e5" x="490.488" y="473.86" width="128.1" height="36"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="490.488" y="473.86" width="128.1" height="36"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="554.538" y="495.86">Morpho-Syntax</text>
+  </g>
+  <g>
+    <ellipse style="fill: #ffffff" cx="554.724" cy="551.964" rx="50.8" ry="18"/>
+    <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="554.724" cy="551.964" rx="50.8" ry="18"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="554.724" y="555.964">Encoding</text>
+  </g>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="618.588,491.86 652.573,491.86 652.573,492.445 686.558,492.445 "/>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="554.538,509.86 554.538,521.407 554.724,521.407 554.724,532.955 "/>
+  <g>
+    <ellipse style="fill: #ffffff" cx="911.576" cy="492.036" rx="39.25" ry="18"/>
+    <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="911.576" cy="492.036" rx="39.25" ry="18"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="911.576" y="496.036">count</text>
+  </g>
+  <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="778.714,492.445 825.015,492.445 825.015,492.036 871.316,492.036 "/>
+</svg>
