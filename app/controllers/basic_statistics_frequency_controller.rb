@@ -2,9 +2,7 @@ class BasicStatisticsFrequencyController < ApplicationController
   include FrequencyChartHelper
 
   def index
-    puts params.inspect
     parameters = read_params
-    puts parameters
     @chart_frequency00 = create_general_graph(parameters[:attribute00], parameters[:percentage00])
     @chart_frequency01 = create_general_graph(parameters[:attribute01], parameters[:percentage01])
     @chart_frequency10 = create_general_graph(parameters[:attribute10], parameters[:percentage10])
@@ -16,7 +14,6 @@ class BasicStatisticsFrequencyController < ApplicationController
   def create_general_graph(attribute, params)
     statistics = BasicStatisticsFrequency.new
     values = statistics.value_frequency_distribution(attribute, params)
-    puts values
     general_graph(attribute, values)
   end
 

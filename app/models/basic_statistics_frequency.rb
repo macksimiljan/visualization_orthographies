@@ -1,7 +1,6 @@
 class BasicStatisticsFrequency
 
   def value_frequency_distribution(attribute, percentage)
-    puts "attribute #{attribute}, percentage #{percentage}"
     cleaned_result = []
     sum = 0
     others = 0

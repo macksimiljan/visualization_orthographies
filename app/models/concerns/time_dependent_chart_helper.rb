@@ -1,7 +1,7 @@
 module TimeDependentChartHelper
   def time_dependent_graph(x_axis, greek_values, coptic_values, ortho_values, source_values)
     LazyHighCharts::HighChart.new('graph') do |f|
-      f.title(text: 'How many entities are attested in sources at a particular time?')
+      f.title(text: 'How many entities are attested for a particular time?')
       f.xAxis(categories: x_axis,
               title: {text: 'Time (start of the interval)', margin: 30, style: {fontSize: '20px'}},
               labels: {style: {fontSize: '17px'}})
